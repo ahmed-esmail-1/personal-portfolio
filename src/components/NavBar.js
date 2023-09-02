@@ -6,12 +6,14 @@ import navIcon2 from "../assets/img/nav-icon2.svg";
 import navIcon3 from "../assets/img/nav-icon3.svg";
 
 export const NavBar = () => {
+  // State variables for active link and scrolled status
   const [activeLink, setActiveLink] = useState("home");
   const [scrolled, setScrolled] = useState(false);
 
+  // Effect to update 'scrolled' when the user scrolls
   useEffect(() => {
     const onScroll = () => {
-      if (window.scrolly > 50) {
+      if (window.scrollY > 50) {
         setScrolled(true);
       } else {
         setScrolled(false);
@@ -19,9 +21,11 @@ export const NavBar = () => {
     };
     window.addEventListener("scroll", onScroll);
 
+    // Cleanup event listener to prevent memory leaks
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Function to update the active link
   const onUpdateActiveLink = (value) => {
     setActiveLink(value);
   };
