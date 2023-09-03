@@ -53,7 +53,7 @@ export const Banner = () => {
                 <Row className="align-items-center">
                     <Col xs={12} md={6} xl={7}>
                         <span className="tagline">Welcome to my Portfolio</span>
-                        <h1>{'Hi, I\'m Ahmed Esmail '}<span className="wrap">{text}</span></h1>
+                        <h1>{'Hi, I\'m Ahmed Esmail ||  '}<span className="wrap">{text}</span></h1>
                         <p>Experienced Software Engineer and Full-Stack Developer with a proven track record of creating robust applications and solutions. Proficient in a wide range of programming languages including C#, Java, JavaScript, and C++, with expertise in backend and frontend development. Known for optimizing performance and enhancing user experience. Strong collaborator, effective problem solver, and dedicated to delivering high-quality results. Open to new opportunities and challenges in the tech industry.</p>
                         <button onClick={() => console.log('connect')}>Let's Connect<ArrowRightCircle size={25} /></button>
                     </Col>
