@@ -377,11 +377,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 
-/************ Skills Css ************/
+/* Styles for the Skills section */
 .skill {
   padding: 0 0 50px 0;
   position: relative;
 }
+
+/* Styles for the skill box */
 .skill-bx {
   background: #151515;
   border-radius: 64px;
@@ -389,26 +391,36 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   padding: 60px 50px;
   margin-top: -60px;
 }
+
+/* Styles for the skill section heading */
 .skill h2 {
-	font-size: 45px;
-	font-weight: 700;
+  font-size: 45px;
+  font-weight: 700;
 }
+
+/* Styles for the skill section description */
 .skill p {
-    color: #B8B8B8;
-    font-size: 18px;
-    letter-spacing: 0.8px;
-    line-height: 1.5em;
-    margin: 14px 0 75px 0;
+  color: #B8B8B8;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  margin: 14px 0 75px 0;
 }
+
+/* Styles for the skill slider (carousel) */
 .skill-slider {
   width: 80%;
   margin: 0 auto;
   position: relative;
 }
+
+/* Styles for the skill slider item images */
 .skill-slider .item img {
   width: 50%;
   margin: 0 auto 15px auto;
 }
+
+/* Styles for the background image on the left */
 .background-image-left {
   top: 28%;
   position: absolute;

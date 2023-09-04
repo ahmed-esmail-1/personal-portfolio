@@ -1,3 +1,5 @@
+// Import necessary dependencies
+import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -6,6 +8,7 @@ import meter2 from "../assets/img/meter2.svg";
 import meter3 from "../assets/img/meter3.svg";
 import colorSharp from "../assets/img/color-sharp.png";
 
+// Define the Skills component
 export const Skills = () => {
     // Responsive settings for the carousel
     const responsive = {
@@ -35,7 +38,7 @@ export const Skills = () => {
                         <div className="skill-bx">
                             <h2>Skills</h2>
                             <p>
-                                Skills: C#, .NET, Java, JavaScript, TypeScript, C++, C, SQL, Git, GitHub, Linux Environment, Object-Oriented Programming (OOP), ASP MVC .NET
+                                C#, .NET, Java, JavaScript, TypeScript, C++, C, SQL, Git, GitHub, Linux Environment, Object-Oriented Programming (OOP), ASP MVC .NET
                             </p>
                             <Carousel responsive={responsive} infinite={true} className="skill-slider">
                                 {/* Skill items */}
@@ -72,5 +75,5 @@ export const Skills = () => {
             {/* Background image */}
             <img className="background-image-left" src={colorSharp} alt="Background" />
         </section>
-    )
-}
+    );
+};
