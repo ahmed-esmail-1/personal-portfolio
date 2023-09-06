@@ -1,3 +1,6 @@
+/*   No need for this way to send contact messages, I did it using emailjs in Contact.js,
+      much simpler way than using this Google Gmail thing
+
 const express = require("express");
 const router = express.Router();
 const cors = require("cors");
@@ -53,4 +56,4 @@ router.post("/contact", (req, res) => {
       res.json({ code: 200, status: "Message Sent" });
     }
   });
-});
+});*/

@@ -1,6 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import contactImg from "../assets/img/contact-img.svg";
+import emailjs from 'emailjs-com';
+
+
 
 export const Contact = () => {
   // Initialize form input values and state variables
@@ -29,29 +32,34 @@ export const Contact = () => {
     e.preventDefault();
     setButtonText("Sending...");
 
-    // Send a POST request to the server with form data
-    let response = await fetch("http://localhost:5000/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json;charset=utf-8",
-      },
-      body: JSON.stringify(formDetails),
-    });
+    // Initialize EmailJS using environment variables
+    emailjs.init(process.env.REACT_APP_EMAILJS_USER_ID);
 
-    setButtonText("Send");
+    // Prepare email data
+    const emailData = {
+      to_email: "ahmedalawi01@gmail.com", // Replace with the recipient's email address
+      from_name: `${formDetails.firstName} ${formDetails.lastName}`,
+      message: `Email Address: ${formDetails.email}\nPhone Number: ${formDetails.phone}\nMessage: ${formDetails.message}`,
+    };
 
-    // Parse the response from the server
-    let result = await response.json();
-
-    // Reset form input values to initial state
-    setFormDetails(formInitialDetails);
-
-    // Update status based on the server response
-    if (result.code === 200) {
-      setStatus({ success: true, message: "Message sent successfully" });
-    } else {
-      setStatus({ success: false, message: "Something went wrong, please try again later." });
-    }
+    // Send email using EmailJS
+    emailjs
+      .send(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE_ID, emailData)
+      .then(
+        (response) => {
+          console.log("Email sent successfully:", response);
+          // Handle success, e.g., show a success message to the user
+          setStatus({ success: true, message: "Message sent successfully" });
+          setFormDetails(formInitialDetails); // Clear the form
+          setButtonText("Send"); // Reset the button text
+        },
+        (error) => {
+          console.error("Email sending failed:", error);
+          // Handle error, e.g., show an error message to the user
+          setStatus({ success: false, message: "Something went wrong, please try again later." });
+          setButtonText("Send"); // Reset the button text
+        }
+      );
   };
 
   return (
@@ -117,7 +125,9 @@ export const Contact = () => {
 
                 {status.message && (
                   <Col>
-                    <p className={status.success === false ? "danger" : "success"}>{status.message}</p>
+                    <p className={status.success === false ? "danger" : "success"}>
+                      {status.message}
+                    </p>
                   </Col>
                 )}
               </Row>
