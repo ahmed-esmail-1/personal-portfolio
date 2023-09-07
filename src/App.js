@@ -7,6 +7,7 @@ import { Projects } from './components/Projects';
 import { Contact } from './components/Contact';
 import { NewsletterSubscription } from './components/NewsletterSubscription';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Footer } from './components/Footer';
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
       <Skills /> 
       <Projects />
       <Contact />
-      <NewsletterSubscription />
+      
+      <Footer />
     </div>
   );
 }

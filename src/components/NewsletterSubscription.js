@@ -52,7 +52,7 @@ export const NewsletterSubscription = () => {
       <div className="newsletter-bx wow slideInUp">
         <Row>
           <Col lg={12} md={6} xl={5}>
-            <h3>Subscribe to our Newsletter<br></br> & Never miss latest updates</h3>
+            <h3>Subscribe to my Newsletter<br></br> & Never miss latest updates</h3>
             {status && <Alert variant={status.success ? "success" : "danger"}>{status.message}</Alert>}
           </Col>
           <Col md={6} xl={7}>
