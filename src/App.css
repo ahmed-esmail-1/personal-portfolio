@@ -670,3 +670,142 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .contact form button:hover::before {
   width: 100%;
 }
+
+/* Newsletter Subscription CSS */
+
+/* Newsletter container styles */
+.newsletter-bx {
+  background: #151515;
+  border-radius: 64px;
+  text-align: center;
+  padding: 60px 50px;
+  margin-top: -60px;
+  margin-bottom: 60px; /* Add margin to create space between sections */
+}
+
+/* Newsletter heading styles */
+.newsletter-bx h3 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+/* Newsletter form styles */
+.newsletter-bx form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Newsletter input styles */
+.new-email-bx input {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  color: #fff;
+  margin: 0 0 15px 0;
+  padding: 18px 26px;
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  transition: 0.3s ease-in-out;
+}
+
+/* Newsletter input focus styles */
+.new-email-bx input:focus {
+  background: rgba(255, 255, 255, 1);
+  color: #121212;
+}
+
+/* Newsletter input placeholder styles */
+.new-email-bx input::placeholder {
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+}
+
+/* Newsletter input placeholder focus styles */
+.new-email-bx input:focus::placeholder {
+  color: #121212;
+  opacity: 0.8;
+}
+
+/* Newsletter textarea styles */
+.new-email-bx textarea {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  color: #fff;
+  margin: 0 0 15px 0;
+  padding: 18px 26px;
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  transition: 0.3s ease-in-out;
+  resize: none; /* Prevent textarea resizing */
+}
+
+/* Newsletter textarea focus styles */
+.new-email-bx textarea:focus {
+  background: rgba(255, 255, 255, 1);
+  color: #121212;
+}
+
+/* Newsletter textarea placeholder styles */
+.new-email-bx textarea::placeholder {
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+}
+
+/* Newsletter textarea placeholder focus styles */
+.new-email-bx textarea:focus::placeholder {
+  color: #121212;
+  opacity: 0.8;
+}
+
+/* Newsletter submit button styles */
+.new-email-bx button {
+  font-weight: 700;
+  color: #fff;
+  background-color: transparent;
+  padding: 14px 48px;
+  font-size: 18px;
+  margin-top: 25px;
+  border-radius: 0;
+  position: relative;
+  transition: 0.3s ease-in-out;
+  border: 2px solid rgba(255, 255, 255, 0.5); /* Add border */
+}
+
+/* Newsletter submit button span styles */
+.new-email-bx button span {
+  z-index: 1;
+}
+
+/* Newsletter submit button background effect */
+.new-email-bx button::before {
+  content: "";
+  background: #121212;
+  width: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  transition: 0.3s ease-in-out;
+}
+
+/* Newsletter submit button hover effect */
+.new-email-bx button:hover {
+  color: #121212;
+  background-color: #fff;
+}
+
+/* Newsletter submit button hover background effect */
+.new-email-bx button:hover::before {
+  width: 100%;
+}
